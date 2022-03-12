@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>getSh*tDone | to-do app</title>
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+
+  <!-- jquery script -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <!-- semantic css -->
+  <link rel="stylesheet" type="text/css" href="./semantic/dist/semantic.min.css" />
+
+  <!-- semantic script js -->
+  <script src="./semantic/dist/semantic.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- navbar start -->
+  <div class="ui sidebar left inverted vertical menu">
+
+    <!-- title -->
+    <div class="divTitle">
+      <p class="textTitle">getSh*tDone</p>
+    </div>
+
+    <!-- categories -->
+    <h1 class="textCategories">Categories:</h1>
+
+    <div id="categories-list"></div>
+    <div class="ui inverted segment">
+
+      <!-- form -->
+      <form class="ui form" id="add-category" autocomplete="off">
+        <!-- input -->
+        <div class="ui input">
+          <input type="text" placeholder="add category" id="add-category-input" />
+        </div>
+
+        <!-- button -->
+        <button class="ui teal icon button">
+          <i class="plus icon"></i>
+        </button>
+      </form>
+
+    </div>
+
+    <!-- footer -->
+    <div class="ui inverted segment footer">
+      <p class="textFooter">&copy juraj stefanic</p>
+      <a href="https://github.com/stefanicjuraj">
+        <img class="iconLinkedIn" src="images/github.svg"></img>
+      </a>
+      <a href="https://www.linkedin.com/in/juraj-stefanic-151619191/">
+        <img class="iconLinkedIn" src="images/linkedin.svg"></img>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- pusher -->
+  <div class="pusher">
+
+    <!-- grid -->
+    <div class="ui grid scrolling content">
+      <div class="row">
+        <div class="sixteen wide column nav">
+          <!-- button menu -->
+          <button class="ui grey button" id="sidebar-menu-button">
+            <i class="bars icon"></i>
+            menu
+          </button>
+        </div>
+      </div>
+
+      <!-- row -->
+      <div class="row">
+        <div class="sixteen wide column">
+          <h1 id="page-title">Private</h1>
+          <div id="todoList" class="todo-list"></div>
+
+          <!-- form -->
+          <form class="ui form one-liner" id="todoFormSimple" autocomplete="off">
+            <!-- input field -->
+            <div class="field">
+              <input type="text" name="todo" autocomplete="off" placeholder="enter task" id="todoInputSimple" />
+            </div>
+            <!-- button add task -->
+            <button class="ui compact labeled icon button teal" type="submit" name="submit">
+              add task<i class="plus icon"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- javascript main -->
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
